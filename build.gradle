@@ -1,0 +1,35 @@
+apply plugin: 'application'
+
+mainClassName = 'Profiling'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+
+}
+
+test {
+
+}
+
+compileJava {
+    options.compilerArgs << '-Xlint'
+}
+
+jar {
+    baseName = 'Profiling'
+    manifest.attributes 'Main-Class': 'Profiling'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+
+    }
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8

@@ -1,13 +1,17 @@
 apply plugin: 'application'
 
-mainClassName = 'Profiling'
+mainClassName = 'BenchmarkRunner'
 
 repositories {
     jcenter()
 }
 
 dependencies {
+    compile 'org.openjdk.jmh:jmh-core:1.33'
+    compile 'org.openjdk.jmh:jmh-generator-annprocess:1.33'
+    implementation 'org.openjdk.jmh:jmh-core:1.33'
 
+    annotationProcessor 'org.openjdk.jmh:jmh-generator-annprocess:1.33'
 }
 
 test {
@@ -19,8 +23,7 @@ compileJava {
 }
 
 jar {
-    baseName = 'Profiling'
-    manifest.attributes 'Main-Class': 'Profiling'
+    manifest.attributes 'Main-Class': 'BenchmarkRunner'
 }
 
 sourceSets {

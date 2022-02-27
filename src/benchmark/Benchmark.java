@@ -1,19 +1,21 @@
 package benchmark;
 
+import org.apache.commons.exec.CommandLine;
+import org.apache.commons.exec.DefaultExecutor;
+import org.apache.commons.exec.PumpStreamHandler;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
-import java.io.BufferedReader;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 
 @BenchmarkMode(Mode.AverageTime)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Measurement(iterations = 5)
 @Warmup(iterations = 3)
 @Fork(2)
@@ -21,26 +23,65 @@ import java.util.stream.Collectors;
 public class Benchmark {
     @State(Scope.Benchmark)
     public static class ExecutionPlan {
-        final ProcessBuilder processBuilder = new ProcessBuilder("java", "-version");
+        @Param({"pwd", "date", "du", })
+        public String command;
+
+        @Param({"false", "true"})
+        public String captureOutput;
+
+        @Param({"10"})
+        public int iterations;
+
+        @Param({"8"})
+        public int numOfThreads;
     }
 
-    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @org.openjdk.jmh.annotations.Benchmark
-    public Process runProcessBuilder(ExecutionPlan plan) throws Exception {
-        ProcessBuilder processBuilder = plan.processBuilder;
-        processBuilder.redirectErrorStream(true);
+    public void runProcessBuilder_withoutThreads(ExecutionPlan plan, Blackhole blackhole) throws Exception {
+        final ProcessBuilder processBuilder = new ProcessBuilder(plan.command);
+        boolean captureOutput = Boolean.parseBoolean(plan.captureOutput);
+        processBuilder.redirectErrorStream(captureOutput);
+
+        // start <iterations> processes to call external programs
+        for (int i = 0; i < plan.iterations; i++) {
+            startProcess(processBuilder, captureOutput, blackhole);
+        }
+    }
+
+    @org.openjdk.jmh.annotations.Benchmark
+    public void runApache_withoutThreads(ExecutionPlan plan, Blackhole blackhole) throws Exception{
+        CommandLine command = CommandLine.parse(plan.command);
+        DefaultExecutor executor = new DefaultExecutor();
+
+        boolean captureOutput = Boolean.parseBoolean(plan.captureOutput);
+        ByteArrayOutputStream stdout = new ByteArrayOutputStream();
+        PumpStreamHandler psh = new PumpStreamHandler(stdout);
+        if (!captureOutput) {
+            // do not capture the stdout
+            executor.setStreamHandler(new PumpStreamHandler(null, null, null));
+        } else {
+            // capture stdout in stream
+            executor.setStreamHandler(psh);
+        }
+
+        // call external programs
+        for (int i = 0; i < plan.iterations; i++) {
+            int exitValue = executor.execute(command);
+            blackhole.consume(exitValue);
+        }
+        blackhole.consume(stdout);
+    }
+
+    private void startProcess(ProcessBuilder processBuilder, boolean captureOutput, Blackhole blackhole) throws  Exception{
         Process process = processBuilder.start();
 
-        // Capture output
-        List<String> results = readOutput(process.getInputStream());
-        return process;
-    }
-
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    //@org.openjdk.jmh.annotations.Benchmark
-    public void runApache(Blackhole blackhole) {
-        // do nothing
-        blackhole.consume(new Object());
+        if (captureOutput){
+            // Capture output
+            List<String> results = readOutput(process.getInputStream());
+            blackhole.consume(results);
+        }
+        int exitCode = process.waitFor();
+        blackhole.consume(exitCode);
     }
 
     private List<String> readOutput(InputStream inputStream) throws IOException {

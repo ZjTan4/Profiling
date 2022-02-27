@@ -12,12 +12,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/META-INF/BenchmarkList" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/META-INF/BenchmarkList" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/META-INF/CompilerHints" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/META-INF/CompilerHints" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark$ExecutionPlan.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark$ExecutionPlan.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/jmh_generated/Benchmark_runProcessBuilder_jmhTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/jmh_generated/Benchmark_runProcessBuilder_jmhTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/benchmark/jmh_generated/Benchmark_runProcessBuilder_jmhTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/benchmark/jmh_generated/Benchmark_runProcessBuilder_jmhTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/BenchmarkRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/BenchmarkRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/jmh_generated/Benchmark_runProcessBuilder_jmhTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/benchmark/jmh_generated/Benchmark_runProcessBuilder_jmhTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/benchmark/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/benchmark/Benchmark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/benchmark/BenchmarkRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/benchmark/BenchmarkRunner.java" afterDir="false" />
     </list>

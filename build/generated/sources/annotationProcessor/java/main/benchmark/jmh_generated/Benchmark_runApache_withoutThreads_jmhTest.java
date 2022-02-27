@@ -34,7 +34,7 @@ import org.openjdk.jmh.runner.FailureAssistException;
 
 import benchmark.jmh_generated.Benchmark_jmhType;
 import benchmark.jmh_generated.Benchmark_ExecutionPlan_jmhType;
-public final class Benchmark_runProcessBuilder_jmhTest {
+public final class Benchmark_runApache_withoutThreads_jmhTest {
 
     byte p000, p001, p002, p003, p004, p005, p006, p007, p008, p009, p010, p011, p012, p013, p014, p015;
     byte p016, p017, p018, p019, p020, p021, p022, p023, p024, p025, p026, p027, p028, p029, p030, p031;
@@ -59,7 +59,7 @@ public final class Benchmark_runProcessBuilder_jmhTest {
     Blackhole blackhole;
     Control notifyControl;
 
-    public BenchmarkTaskResult runProcessBuilder_Throughput(InfraControl control, ThreadParams threadParams) throws Throwable {
+    public BenchmarkTaskResult runApache_withoutThreads_Throughput(InfraControl control, ThreadParams threadParams) throws Throwable {
         this.benchmarkParams = control.benchmarkParams;
         this.iterationParams = control.iterationParams;
         this.threadParams    = threadParams;
@@ -77,17 +77,17 @@ public final class Benchmark_runProcessBuilder_jmhTest {
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
-                blackhole.consume(l_benchmark0_0.runProcessBuilder(l_executionplan1_G));
+                l_benchmark0_0.runApache_withoutThreads(l_executionplan1_G, blackhole);
                 res.allOps++;
             }
 
             notifyControl.startMeasurement = true;
-            runProcessBuilder_thrpt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_executionplan1_G, l_benchmark0_0);
+            runApache_withoutThreads_thrpt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_executionplan1_G, l_benchmark0_0);
             notifyControl.stopMeasurement = true;
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
-                    blackhole.consume(l_benchmark0_0.runProcessBuilder(l_executionplan1_G));
+                    l_benchmark0_0.runApache_withoutThreads(l_executionplan1_G, blackhole);
                     res.allOps++;
                 }
             } catch (Throwable e) {
@@ -109,19 +109,19 @@ public final class Benchmark_runProcessBuilder_jmhTest {
             res.measuredOps *= opsPerInv;
             res.measuredOps /= batchSize;
             BenchmarkTaskResult results = new BenchmarkTaskResult((long)res.allOps, (long)res.measuredOps);
-            results.add(new ThroughputResult(ResultRole.PRIMARY, "runProcessBuilder", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
+            results.add(new ThroughputResult(ResultRole.PRIMARY, "runApache_withoutThreads", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
             this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
             return results;
         } else
             throw new IllegalStateException("Harness failed to distribute threads among groups properly");
     }
 
-    public static void runProcessBuilder_thrpt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, Benchmark_ExecutionPlan_jmhType l_executionplan1_G, Benchmark_jmhType l_benchmark0_0) throws Throwable {
+    public static void runApache_withoutThreads_thrpt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, Benchmark_ExecutionPlan_jmhType l_executionplan1_G, Benchmark_jmhType l_benchmark0_0) throws Throwable {
         long operations = 0;
         long realTime = 0;
         result.startTime = System.nanoTime();
         do {
-            blackhole.consume(l_benchmark0_0.runProcessBuilder(l_executionplan1_G));
+            l_benchmark0_0.runApache_withoutThreads(l_executionplan1_G, blackhole);
             operations++;
         } while(!control.isDone);
         result.stopTime = System.nanoTime();
@@ -130,7 +130,7 @@ public final class Benchmark_runProcessBuilder_jmhTest {
     }
 
 
-    public BenchmarkTaskResult runProcessBuilder_AverageTime(InfraControl control, ThreadParams threadParams) throws Throwable {
+    public BenchmarkTaskResult runApache_withoutThreads_AverageTime(InfraControl control, ThreadParams threadParams) throws Throwable {
         this.benchmarkParams = control.benchmarkParams;
         this.iterationParams = control.iterationParams;
         this.threadParams    = threadParams;
@@ -148,17 +148,17 @@ public final class Benchmark_runProcessBuilder_jmhTest {
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
-                blackhole.consume(l_benchmark0_0.runProcessBuilder(l_executionplan1_G));
+                l_benchmark0_0.runApache_withoutThreads(l_executionplan1_G, blackhole);
                 res.allOps++;
             }
 
             notifyControl.startMeasurement = true;
-            runProcessBuilder_avgt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_executionplan1_G, l_benchmark0_0);
+            runApache_withoutThreads_avgt_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, l_executionplan1_G, l_benchmark0_0);
             notifyControl.stopMeasurement = true;
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
-                    blackhole.consume(l_benchmark0_0.runProcessBuilder(l_executionplan1_G));
+                    l_benchmark0_0.runApache_withoutThreads(l_executionplan1_G, blackhole);
                     res.allOps++;
                 }
             } catch (Throwable e) {
@@ -180,19 +180,19 @@ public final class Benchmark_runProcessBuilder_jmhTest {
             res.measuredOps *= opsPerInv;
             res.measuredOps /= batchSize;
             BenchmarkTaskResult results = new BenchmarkTaskResult((long)res.allOps, (long)res.measuredOps);
-            results.add(new AverageTimeResult(ResultRole.PRIMARY, "runProcessBuilder", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
+            results.add(new AverageTimeResult(ResultRole.PRIMARY, "runApache_withoutThreads", res.measuredOps, res.getTime(), benchmarkParams.getTimeUnit()));
             this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
             return results;
         } else
             throw new IllegalStateException("Harness failed to distribute threads among groups properly");
     }
 
-    public static void runProcessBuilder_avgt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, Benchmark_ExecutionPlan_jmhType l_executionplan1_G, Benchmark_jmhType l_benchmark0_0) throws Throwable {
+    public static void runApache_withoutThreads_avgt_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, Benchmark_ExecutionPlan_jmhType l_executionplan1_G, Benchmark_jmhType l_benchmark0_0) throws Throwable {
         long operations = 0;
         long realTime = 0;
         result.startTime = System.nanoTime();
         do {
-            blackhole.consume(l_benchmark0_0.runProcessBuilder(l_executionplan1_G));
+            l_benchmark0_0.runApache_withoutThreads(l_executionplan1_G, blackhole);
             operations++;
         } while(!control.isDone);
         result.stopTime = System.nanoTime();
@@ -201,7 +201,7 @@ public final class Benchmark_runProcessBuilder_jmhTest {
     }
 
 
-    public BenchmarkTaskResult runProcessBuilder_SampleTime(InfraControl control, ThreadParams threadParams) throws Throwable {
+    public BenchmarkTaskResult runApache_withoutThreads_SampleTime(InfraControl control, ThreadParams threadParams) throws Throwable {
         this.benchmarkParams = control.benchmarkParams;
         this.iterationParams = control.iterationParams;
         this.threadParams    = threadParams;
@@ -219,7 +219,7 @@ public final class Benchmark_runProcessBuilder_jmhTest {
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
-                blackhole.consume(l_benchmark0_0.runProcessBuilder(l_executionplan1_G));
+                l_benchmark0_0.runApache_withoutThreads(l_executionplan1_G, blackhole);
                 res.allOps++;
             }
 
@@ -228,12 +228,12 @@ public final class Benchmark_runProcessBuilder_jmhTest {
             int batchSize = iterationParams.getBatchSize();
             int opsPerInv = benchmarkParams.getOpsPerInvocation();
             SampleBuffer buffer = new SampleBuffer();
-            runProcessBuilder_sample_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, buffer, targetSamples, opsPerInv, batchSize, l_executionplan1_G, l_benchmark0_0);
+            runApache_withoutThreads_sample_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, buffer, targetSamples, opsPerInv, batchSize, l_executionplan1_G, l_benchmark0_0);
             notifyControl.stopMeasurement = true;
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
-                    blackhole.consume(l_benchmark0_0.runProcessBuilder(l_executionplan1_G));
+                    l_benchmark0_0.runApache_withoutThreads(l_executionplan1_G, blackhole);
                     res.allOps++;
                 }
             } catch (Throwable e) {
@@ -252,14 +252,14 @@ public final class Benchmark_runProcessBuilder_jmhTest {
             res.allOps /= batchSize;
             res.measuredOps *= opsPerInv;
             BenchmarkTaskResult results = new BenchmarkTaskResult((long)res.allOps, (long)res.measuredOps);
-            results.add(new SampleTimeResult(ResultRole.PRIMARY, "runProcessBuilder", buffer, benchmarkParams.getTimeUnit()));
+            results.add(new SampleTimeResult(ResultRole.PRIMARY, "runApache_withoutThreads", buffer, benchmarkParams.getTimeUnit()));
             this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
             return results;
         } else
             throw new IllegalStateException("Harness failed to distribute threads among groups properly");
     }
 
-    public static void runProcessBuilder_sample_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, SampleBuffer buffer, int targetSamples, long opsPerInv, int batchSize, Benchmark_ExecutionPlan_jmhType l_executionplan1_G, Benchmark_jmhType l_benchmark0_0) throws Throwable {
+    public static void runApache_withoutThreads_sample_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, SampleBuffer buffer, int targetSamples, long opsPerInv, int batchSize, Benchmark_ExecutionPlan_jmhType l_executionplan1_G, Benchmark_jmhType l_benchmark0_0) throws Throwable {
         long realTime = 0;
         long operations = 0;
         int rnd = (int)System.nanoTime();
@@ -274,7 +274,7 @@ public final class Benchmark_runProcessBuilder_jmhTest {
             }
             for (int b = 0; b < batchSize; b++) {
                 if (control.volatileSpoiler) return;
-                blackhole.consume(l_benchmark0_0.runProcessBuilder(l_executionplan1_G));
+                l_benchmark0_0.runApache_withoutThreads(l_executionplan1_G, blackhole);
             }
             if (sample) {
                 buffer.add((System.nanoTime() - time) / opsPerInv);
@@ -292,7 +292,7 @@ public final class Benchmark_runProcessBuilder_jmhTest {
     }
 
 
-    public BenchmarkTaskResult runProcessBuilder_SingleShotTime(InfraControl control, ThreadParams threadParams) throws Throwable {
+    public BenchmarkTaskResult runApache_withoutThreads_SingleShotTime(InfraControl control, ThreadParams threadParams) throws Throwable {
         this.benchmarkParams = control.benchmarkParams;
         this.iterationParams = control.iterationParams;
         this.threadParams    = threadParams;
@@ -310,7 +310,7 @@ public final class Benchmark_runProcessBuilder_jmhTest {
             notifyControl.startMeasurement = true;
             RawResults res = new RawResults();
             int batchSize = iterationParams.getBatchSize();
-            runProcessBuilder_ss_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, batchSize, l_executionplan1_G, l_benchmark0_0);
+            runApache_withoutThreads_ss_jmhStub(control, res, benchmarkParams, iterationParams, threadParams, blackhole, notifyControl, startRndMask, batchSize, l_executionplan1_G, l_benchmark0_0);
             control.preTearDown();
 
             if (control.isLastIteration()) {
@@ -322,19 +322,19 @@ public final class Benchmark_runProcessBuilder_jmhTest {
             int opsPerInv = control.benchmarkParams.getOpsPerInvocation();
             long totalOps = opsPerInv;
             BenchmarkTaskResult results = new BenchmarkTaskResult(totalOps, totalOps);
-            results.add(new SingleShotResult(ResultRole.PRIMARY, "runProcessBuilder", res.getTime(), benchmarkParams.getTimeUnit()));
+            results.add(new SingleShotResult(ResultRole.PRIMARY, "runApache_withoutThreads", res.getTime(), benchmarkParams.getTimeUnit()));
             this.blackhole.evaporate("Yes, I am Stephen Hawking, and know a thing or two about black holes.");
             return results;
         } else
             throw new IllegalStateException("Harness failed to distribute threads among groups properly");
     }
 
-    public static void runProcessBuilder_ss_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, int batchSize, Benchmark_ExecutionPlan_jmhType l_executionplan1_G, Benchmark_jmhType l_benchmark0_0) throws Throwable {
+    public static void runApache_withoutThreads_ss_jmhStub(InfraControl control, RawResults result, BenchmarkParams benchmarkParams, IterationParams iterationParams, ThreadParams threadParams, Blackhole blackhole, Control notifyControl, int startRndMask, int batchSize, Benchmark_ExecutionPlan_jmhType l_executionplan1_G, Benchmark_jmhType l_benchmark0_0) throws Throwable {
         long realTime = 0;
         result.startTime = System.nanoTime();
         for (int b = 0; b < batchSize; b++) {
             if (control.volatileSpoiler) return;
-            blackhole.consume(l_benchmark0_0.runProcessBuilder(l_executionplan1_G));
+            l_benchmark0_0.runApache_withoutThreads(l_executionplan1_G, blackhole);
         }
         result.stopTime = System.nanoTime();
         result.realTime = realTime;
@@ -356,6 +356,19 @@ public final class Benchmark_runProcessBuilder_jmhTest {
                 return val;
             }
             val = new Benchmark_ExecutionPlan_jmhType();
+            Field f;
+            f = benchmark.Benchmark.ExecutionPlan.class.getDeclaredField("captureOutput");
+            f.setAccessible(true);
+            f.set(val, control.getParam("captureOutput"));
+            f = benchmark.Benchmark.ExecutionPlan.class.getDeclaredField("command");
+            f.setAccessible(true);
+            f.set(val, control.getParam("command"));
+            f = benchmark.Benchmark.ExecutionPlan.class.getDeclaredField("iterations");
+            f.setAccessible(true);
+            f.set(val, Integer.valueOf(control.getParam("iterations")));
+            f = benchmark.Benchmark.ExecutionPlan.class.getDeclaredField("numOfThreads");
+            f.setAccessible(true);
+            f.set(val, Integer.valueOf(control.getParam("numOfThreads")));
             val.readyTrial = true;
             f_executionplan1_G = val;
             } catch (Throwable t) {

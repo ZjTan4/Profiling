@@ -1,6 +1,6 @@
 apply plugin: 'application'
 
-mainClassName = 'BenchmarkRunner'
+mainClassName = 'benchmark.BenchmarkRunner'
 
 repositories {
     jcenter()
@@ -23,7 +23,7 @@ compileJava {
 }
 
 jar {
-    manifest.attributes 'Main-Class': 'BenchmarkRunner'
+    manifest.attributes 'Main-Class': 'benchmark.BenchmarkRunner'
 }
 
 sourceSets {

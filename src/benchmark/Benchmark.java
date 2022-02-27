@@ -10,6 +10,8 @@ import org.openjdk.jmh.infra.Blackhole;
 import java.io.*;
 
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
@@ -32,7 +34,7 @@ public class Benchmark {
         @Param({"10"})
         public int iterations;
 
-        @Param({"8"})
+        @Param({"1", "24", "128"})
         public int numOfThreads;
     }
 
@@ -49,7 +51,48 @@ public class Benchmark {
     }
 
     @org.openjdk.jmh.annotations.Benchmark
+    public void runProcessBuilder_withThreads(ExecutionPlan plan, Blackhole blackhole) throws Exception {
+        ExecutorService service = Executors.newCachedThreadPool();
+
+
+        final ProcessBuilder processBuilder = new ProcessBuilder(plan.command);
+        boolean captureOutput = Boolean.parseBoolean(plan.captureOutput);
+        processBuilder.redirectErrorStream(captureOutput);
+
+        // start <iterations> processes to call external programs
+        for (int i = 0; i < plan.iterations; i++) {
+            startProcess(processBuilder, captureOutput, blackhole);
+        }
+    }
+
+
+    @org.openjdk.jmh.annotations.Benchmark
     public void runApache_withoutThreads(ExecutionPlan plan, Blackhole blackhole) throws Exception{
+        CommandLine command = CommandLine.parse(plan.command);
+        DefaultExecutor executor = new DefaultExecutor();
+
+        boolean captureOutput = Boolean.parseBoolean(plan.captureOutput);
+        ByteArrayOutputStream stdout = new ByteArrayOutputStream();
+        PumpStreamHandler psh = new PumpStreamHandler(stdout);
+        if (!captureOutput) {
+            // do not capture the stdout
+            executor.setStreamHandler(new PumpStreamHandler(null, null, null));
+        } else {
+            // capture stdout in stream
+            executor.setStreamHandler(psh);
+        }
+
+        // call external programs
+        for (int i = 0; i < plan.iterations; i++) {
+            int exitValue = executor.execute(command);
+            blackhole.consume(exitValue);
+        }
+        blackhole.consume(stdout);
+    }
+
+
+    @org.openjdk.jmh.annotations.Benchmark
+    public void runApache_withThreads(ExecutionPlan plan, Blackhole blackhole) throws Exception{
         CommandLine command = CommandLine.parse(plan.command);
         DefaultExecutor executor = new DefaultExecutor();
 

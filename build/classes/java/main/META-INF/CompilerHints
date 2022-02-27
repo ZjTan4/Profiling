@@ -3,5 +3,7 @@ dontinline,*.*_avgt_jmhStub
 dontinline,*.*_sample_jmhStub
 dontinline,*.*_ss_jmhStub
 dontinline,*.*_thrpt_jmhStub
+inline,benchmark/Benchmark.runApache_withThreads
 inline,benchmark/Benchmark.runApache_withoutThreads
+inline,benchmark/Benchmark.runProcessBuilder_withThreads
 inline,benchmark/Benchmark.runProcessBuilder_withoutThreads

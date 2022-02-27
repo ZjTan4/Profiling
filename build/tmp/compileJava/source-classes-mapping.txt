@@ -1,4 +1,5 @@
 benchmark/Benchmark.java
  benchmark.Benchmark
+ benchmark.Benchmark$ExecutionPlan
 benchmark/BenchmarkRunner.java
  benchmark.BenchmarkRunner

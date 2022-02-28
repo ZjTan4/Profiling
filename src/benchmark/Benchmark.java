@@ -15,7 +15,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-@BenchmarkMode(Mode.All)
+@BenchmarkMode({Mode.AverageTime})
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Measurement(iterations = 5)
 @Warmup(iterations = 3)
@@ -36,8 +36,8 @@ public class Benchmark {
 
     }
 
-    //@org.openjdk.jmh.annotations.Benchmark
-    public void runProcessBuilder_withoutThreads(ExecutionPlan plan, Blackhole blackhole) throws Exception {
+    @org.openjdk.jmh.annotations.Benchmark
+    public void runProcessBuilder(ExecutionPlan plan, Blackhole blackhole) throws Exception {
         final ProcessBuilder processBuilder = new ProcessBuilder(plan.command);
         boolean captureOutput = Boolean.parseBoolean(plan.captureOutput);
         processBuilder.redirectErrorStream(captureOutput);
@@ -49,7 +49,7 @@ public class Benchmark {
     }
 
     @org.openjdk.jmh.annotations.Benchmark
-    public void runApache_withoutThreads(ExecutionPlan plan, Blackhole blackhole) throws Exception{
+    public void runApache(ExecutionPlan plan, Blackhole blackhole) throws Exception{
         CommandLine command = CommandLine.parse(plan.command);
         DefaultExecutor executor = new DefaultExecutor();
 

@@ -1,0 +1,41 @@
+# Run complete. Total time: 00:13:57
+
+Benchmark                        (captureOutput)  (command)  (iterations)  Mode  Cnt           Score            Error    Units
+Benchmark.runApache                        false        pwd             5  avgt   10          47.367 ±         10.202    ms/op
+Benchmark.runApache                        false        pwd            10  avgt   10          87.689 ±         14.943    ms/op
+Benchmark.runApache                        false        pwd            20  avgt   10         161.711 ±         10.063    ms/op
+Benchmark.runApache                        false       date             5  avgt   10          40.881 ±          0.918    ms/op
+Benchmark.runApache                        false       date            10  avgt   10          81.585 ±          0.996    ms/op
+Benchmark.runApache                        false       date            20  avgt   10         164.430 ±          4.253    ms/op
+Benchmark.runApache                        false         du             5  avgt   10         181.423 ±          7.587    ms/op
+Benchmark.runApache                        false         du            10  avgt   10         363.035 ±         11.277    ms/op
+Benchmark.runApache                        false         du            20  avgt   10         739.529 ±         51.450    ms/op
+Benchmark.runApache                         true        pwd             5  avgt   10          64.055 ±         10.285    ms/op
+Benchmark.runApache                         true        pwd            10  avgt   10         126.965 ±         20.958    ms/op
+Benchmark.runApache                         true        pwd            20  avgt   10         255.797 ±         36.190    ms/op
+Benchmark.runApache                         true       date             5  avgt   10          60.740 ±          2.740    ms/op
+Benchmark.runApache                         true       date            10  avgt   10         120.696 ±          3.171    ms/op
+Benchmark.runApache                         true       date            20  avgt   10         246.800 ±         25.434    ms/op
+Benchmark.runApache                         true         du             5  avgt   10         246.269 ±         34.777    ms/op
+Benchmark.runApache                         true         du            10  avgt   10         485.943 ±         20.584    ms/op
+Benchmark.runApache                         true         du            20  avgt   10        1032.686 ±         70.213    ms/op
+
+
+Benchmark.runProcessBuilder                false        pwd             5  avgt   10          42.162 ±          3.820    ms/op
+Benchmark.runProcessBuilder                false        pwd            10  avgt   10          80.877 ±         20.565    ms/op
+Benchmark.runProcessBuilder                false        pwd            20  avgt   10         171.751 ±         39.240    ms/op
+Benchmark.runProcessBuilder                false       date             5  avgt   10          38.059 ±          1.199    ms/op
+Benchmark.runProcessBuilder                false       date            10  avgt   10          79.991 ±          7.114    ms/op
+Benchmark.runProcessBuilder                false       date            20  avgt   10         161.903 ±          2.258    ms/op
+Benchmark.runProcessBuilder                false         du             5  avgt   10         179.498 ±          6.081    ms/op
+Benchmark.runProcessBuilder                false         du            10  avgt   10         358.497 ±          3.814    ms/op
+Benchmark.runProcessBuilder                false         du            20  avgt   10         707.839 ±         11.496    ms/op
+Benchmark.runProcessBuilder                 true        pwd             5  avgt   10          39.844 ±          1.021    ms/op
+Benchmark.runProcessBuilder                 true        pwd            10  avgt   10          83.524 ±         10.320    ms/op
+Benchmark.runProcessBuilder                 true        pwd            20  avgt   10         206.477 ±         53.841    ms/op
+Benchmark.runProcessBuilder                 true       date             5  avgt   10          43.026 ±          1.299    ms/op
+Benchmark.runProcessBuilder                 true       date            10  avgt   10          87.020 ±          5.083    ms/op
+Benchmark.runProcessBuilder                 true       date            20  avgt   10         174.007 ±          7.215    ms/op
+Benchmark.runProcessBuilder                 true         du             5  avgt   10         261.275 ±          9.356    ms/op
+Benchmark.runProcessBuilder                 true         du            10  avgt   10         535.711 ±         24.870    ms/op
+Benchmark.runProcessBuilder                 true         du            20  avgt   10        1088.211 ±         80.045    ms/op

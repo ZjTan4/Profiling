@@ -1,0 +1,40 @@
+Benchmark.runApache:·threads:alive               false        pwd             5  avgt   10          54.500 ±          0.797  threads:alive
+Benchmark.runApache:·threads:alive               false        pwd            10  avgt   10          54.500 ±          0.797  threads:alive
+Benchmark.runApache:·threads:alive               false        pwd            20  avgt   10          60.500 ±         10.359  threads:alive
+Benchmark.runApache:·threads:alive               false       date             5  avgt   10          60.000 ±          3.187  threads:alive
+Benchmark.runApache:·threads:alive               false       date            10  avgt   10          47.000 ±          9.562  threads:alive
+Benchmark.runApache:·threads:alive               false       date            20  avgt   10          58.000 ±          6.375  threads:alive
+Benchmark.runApache:·threads:alive               false         du             5  avgt   10          52.200 ±          4.608  threads:alive
+Benchmark.runApache:·threads:alive               false         du            10  avgt   10          50.500 ±          2.390  threads:alive
+Benchmark.runApache:·threads:alive               false         du            20  avgt   10          47.300 ±          0.730  threads:alive
+Benchmark.runApache:·threads:alive                true        pwd             5  avgt   10          62.500 ±         13.546  threads:alive
+Benchmark.runApache:·threads:alive                true        pwd            10  avgt   10          57.500 ±          7.171  threads:alive
+Benchmark.runApache:·threads:alive                true        pwd            20  avgt   10          78.500 ±         15.140  threads:alive
+Benchmark.runApache:·threads:alive                true       date             5  avgt   10          67.000 ±         12.749  threads:alive
+Benchmark.runApache:·threads:alive                true       date            10  avgt   10          75.000 ±          9.562  threads:alive
+Benchmark.runApache:·threads:alive                true       date            20  avgt   10          56.500 ±          0.797  threads:alive
+Benchmark.runApache:·threads:alive                true         du             5  avgt   10          54.500 ±          2.390  threads:alive
+Benchmark.runApache:·threads:alive                true         du            10  avgt   10          64.500 ±         15.140  threads:alive
+Benchmark.runApache:·threads:alive                true         du            20  avgt   10          65.000 ±         17.530  threads:alive
+
+
+Benchmark.runProcessBuilder:·threads:alive       false        pwd             5  avgt   10          49.100 ±          8.014  threads:alive
+Benchmark.runProcessBuilder:·threads:alive       false        pwd            10  avgt   10          42.000 ±          1.594  threads:alive
+Benchmark.runProcessBuilder:·threads:alive       false        pwd            20  avgt   10          73.300 ±         48.933  threads:alive
+Benchmark.runProcessBuilder:·threads:alive       false       date             5  avgt   10          56.000 ±         20.717  threads:alive
+Benchmark.runProcessBuilder:·threads:alive       false       date            10  avgt   10          72.000 ±         49.403  threads:alive
+Benchmark.runProcessBuilder:·threads:alive       false       date            20  avgt   10          59.000 ±         27.092  threads:alive
+Benchmark.runProcessBuilder:·threads:alive       false         du             5  avgt   10          47.100 ±          2.977  threads:alive
+Benchmark.runProcessBuilder:·threads:alive       false         du            10  avgt   10          50.000 ±          3.187  threads:alive
+Benchmark.runProcessBuilder:·threads:alive       false         du            20  avgt   10          48.800 ±          2.448  threads:alive
+Benchmark.runProcessBuilder:·threads:alive        true        pwd             5  avgt   10         162.500 ±          7.171  threads:alive
+Benchmark.runProcessBuilder:·threads:alive        true        pwd            10  avgt   10         129.000 ±          7.968  threads:alive
+Benchmark.runProcessBuilder:·threads:alive        true        pwd            20  avgt   10          68.300 ±         29.883  threads:alive
+Benchmark.runProcessBuilder:·threads:alive        true       date             5  avgt   10          48.500 ±          0.797  threads:alive
+Benchmark.runProcessBuilder:·threads:alive        true       date            10  avgt   10          84.500 ±         54.980  threads:alive
+Benchmark.runProcessBuilder:·threads:alive        true       date            20  avgt   10          82.500 ±         54.980  threads:alive
+Benchmark.runProcessBuilder:·threads:alive        true         du             5  avgt   10          49.900 ±          0.478  threads:alive
+Benchmark.runProcessBuilder:·threads:alive        true         du            10  avgt   10          50.800 ±          0.637  threads:alive
+Benchmark.runProcessBuilder:·threads:alive        true         du            20  avgt   10          51.300 ±          0.730  threads:alive
+
+threads:alive.alive

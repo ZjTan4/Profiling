@@ -24,21 +24,24 @@ import java.util.stream.Collectors;
 public class Benchmark {
     @State(Scope.Benchmark)
     public static class ExecutionPlan {
-        @Param({"pwd", "date", "du", })
-        //@Param({"du", })
+        //@Param({"https -h google.com", "cat ./input_short", "cat ./input_long", })
+        @Param({"cat ./input_long", })
         public String command;
+
+        @Param({">&1", ">&2", "| tee >(1>&2)"})
+        public String args;
 
         @Param({"false", "true"})
         public String captureOutput;
 
-        @Param({"5", "10", "20"})
+        @Param({"1"})
         public int iterations;
 
     }
 
     @org.openjdk.jmh.annotations.Benchmark
     public void runProcessBuilder(ExecutionPlan plan, Blackhole blackhole) throws Exception {
-        final ProcessBuilder processBuilder = new ProcessBuilder(plan.command);
+        final ProcessBuilder processBuilder = new ProcessBuilder(plan.command, plan.args);
         boolean captureOutput = Boolean.parseBoolean(plan.captureOutput);
         processBuilder.redirectErrorStream(captureOutput);
 
@@ -53,6 +56,7 @@ public class Benchmark {
         CommandLine command = CommandLine.parse(plan.command);
         DefaultExecutor executor = new DefaultExecutor();
 
+        // redirect output
         boolean captureOutput = Boolean.parseBoolean(plan.captureOutput);
         ByteArrayOutputStream stdout = new ByteArrayOutputStream();
         PumpStreamHandler psh = new PumpStreamHandler(stdout);

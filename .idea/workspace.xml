@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="763ee47b-865a-43b5-b2b3-5c6dfc59e8b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/memory.log" beforeDir="false" afterPath="$PROJECT_DIR$/memory.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threads_started.log" beforeDir="false" afterPath="$PROJECT_DIR$/threads_started.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time.log" beforeDir="false" afterPath="$PROJECT_DIR$/time.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/META-INF/BenchmarkList" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/META-INF/BenchmarkList" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark$ExecutionPlan.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark$ExecutionPlan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/BenchmarkRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/BenchmarkRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/generated/Benchmark_runApache.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/generated/Benchmark_runApache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/generated/Benchmark_runProcessBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/generated/Benchmark_runProcessBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/benchmark/generated/Benchmark_runApache.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/benchmark/generated/Benchmark_runApache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/benchmark/generated/Benchmark_runProcessBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/benchmark/generated/Benchmark_runProcessBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/benchmark/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/benchmark/Benchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/benchmark/BenchmarkRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/benchmark/BenchmarkRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +118,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" value="--stacktrace" />
         <option name="taskDescriptions">
           <list />
         </option>

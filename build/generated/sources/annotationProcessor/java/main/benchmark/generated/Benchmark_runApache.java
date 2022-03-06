@@ -330,6 +330,9 @@ public final class Benchmark_runApache {
             }
             val = new Benchmark_ExecutionPlan_jmh();
             Field f;
+            f = benchmark.Benchmark.ExecutionPlan.class.getDeclaredField("args");
+            f.setAccessible(true);
+            f.set(val, control.getParam("args"));
             f = benchmark.Benchmark.ExecutionPlan.class.getDeclaredField("captureOutput");
             f.setAccessible(true);
             f.set(val, control.getParam("captureOutput"));

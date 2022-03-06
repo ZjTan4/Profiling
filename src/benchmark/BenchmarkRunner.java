@@ -14,8 +14,8 @@ public class BenchmarkRunner {
         System.setOut(log);
 
         Options opt = new OptionsBuilder()
-                .addProfiler(HotspotMemoryProfiler.class)
-                .addProfiler(HotspotThreadProfiler.class)
+//                .addProfiler(HotspotMemoryProfiler.class)
+//                .addProfiler(HotspotThreadProfiler.class)
                 .build();
         new Runner(opt).run();
 //        org.openjdk.jmh.Main.main(args);

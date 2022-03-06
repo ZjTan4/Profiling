@@ -10,8 +10,8 @@ import java.io.PrintStream;
 
 public class BenchmarkRunner {
     public static void main(String[] args) throws Exception {
-        PrintStream log = new PrintStream("./out.log");
-        System.setOut(log);
+//        PrintStream log = new PrintStream("./out.log");
+//        System.setOut(log);
 
         Options opt = new OptionsBuilder()
 //                .addProfiler(HotspotMemoryProfiler.class)

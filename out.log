@@ -11,31 +11,31 @@
 
 # Run progress: 0.00% complete, ETA 00:03:12
 # Fork: 1 of 2
-# Warmup Iteration   1: 11.931 ±(99.9%) 0.426 ms/op
-# Warmup Iteration   2: 10.304 ±(99.9%) 0.333 ms/op
-# Warmup Iteration   3: 11.598 ±(99.9%) 0.445 ms/op
-Iteration   1: 10.265 ±(99.9%) 0.309 ms/op
-Iteration   2: 10.153 ±(99.9%) 0.370 ms/op
-Iteration   3: 10.399 ±(99.9%) 0.356 ms/op
-Iteration   4: 10.127 ±(99.9%) 0.335 ms/op
-Iteration   5: 9.707 ±(99.9%) 0.373 ms/op
+# Warmup Iteration   1: 10.991 ±(99.9%) 0.481 ms/op
+# Warmup Iteration   2: 13.344 ±(99.9%) 0.578 ms/op
+# Warmup Iteration   3: 13.976 ±(99.9%) 0.647 ms/op
+Iteration   1: 11.421 ±(99.9%) 0.428 ms/op
+Iteration   2: 9.240 ±(99.9%) 0.284 ms/op
+Iteration   3: 11.276 ±(99.9%) 0.445 ms/op
+Iteration   4: 9.638 ±(99.9%) 0.281 ms/op
+Iteration   5: 9.391 ±(99.9%) 0.368 ms/op
 
 # Run progress: 4.17% complete, ETA 00:03:20
 # Fork: 2 of 2
-# Warmup Iteration   1: 10.760 ±(99.9%) 0.455 ms/op
-# Warmup Iteration   2: 11.113 ±(99.9%) 0.365 ms/op
-# Warmup Iteration   3: 12.320 ±(99.9%) 0.681 ms/op
-Iteration   1: 12.335 ±(99.9%) 0.628 ms/op
-Iteration   2: 11.509 ±(99.9%) 0.612 ms/op
-Iteration   3: 10.764 ±(99.9%) 0.626 ms/op
-Iteration   4: 9.680 ±(99.9%) 0.328 ms/op
-Iteration   5: 9.481 ±(99.9%) 0.372 ms/op
+# Warmup Iteration   1: 10.105 ±(99.9%) 0.532 ms/op
+# Warmup Iteration   2: 9.808 ±(99.9%) 0.277 ms/op
+# Warmup Iteration   3: 13.221 ±(99.9%) 0.582 ms/op
+Iteration   1: 18.317 ±(99.9%) 0.674 ms/op
+Iteration   2: 17.289 ±(99.9%) 0.707 ms/op
+Iteration   3: 11.087 ±(99.9%) 0.359 ms/op
+Iteration   4: 13.801 ±(99.9%) 0.509 ms/op
+Iteration   5: 10.880 ±(99.9%) 0.409 ms/op
 
 
 Result "runApache":
-  10.442 ±(99.9%) 1.341 ms/op [Average]
-  (min, avg, max) = (9.481, 10.442, 12.335), stdev = 0.887
-  CI (99.9%): [9.100, 11.783] (assumes normal distribution)
+  12.234 ±(99.9%) 4.874 ms/op [Average]
+  (min, avg, max) = (9.240, 12.234, 18.317), stdev = 3.224
+  CI (99.9%): [7.360, 17.108] (assumes normal distribution)
 
 
 # JMH 1.9.3 (released 2487 days ago, please consider updating!)
@@ -49,33 +49,33 @@ Result "runApache":
 # Benchmark: benchmark.Benchmark.runApache
 # Parameters: (args = >&1, captureOutput = true, command = cat ./input_long, iterations = 1)
 
-# Run progress: 8.33% complete, ETA 00:03:10
+# Run progress: 8.33% complete, ETA 00:03:12
 # Fork: 1 of 2
-# Warmup Iteration   1: 18.658 ±(99.9%) 1.515 ms/op
-# Warmup Iteration   2: 17.669 ±(99.9%) 1.264 ms/op
-# Warmup Iteration   3: 18.860 ±(99.9%) 1.471 ms/op
-Iteration   1: 22.033 ±(99.9%) 1.860 ms/op
-Iteration   2: 53.765 ±(99.9%) 9.936 ms/op
-Iteration   3: 28.566 ±(99.9%) 2.754 ms/op
-Iteration   4: 16.899 ±(99.9%) 1.267 ms/op
-Iteration   5: 14.725 ±(99.9%) 0.857 ms/op
+# Warmup Iteration   1: 19.081 ±(99.9%) 1.365 ms/op
+# Warmup Iteration   2: 17.279 ±(99.9%) 1.342 ms/op
+# Warmup Iteration   3: 15.621 ±(99.9%) 1.551 ms/op
+Iteration   1: 19.623 ±(99.9%) 1.577 ms/op
+Iteration   2: 15.244 ±(99.9%) 1.287 ms/op
+Iteration   3: 52.693 ±(99.9%) 7.054 ms/op
+Iteration   4: 34.103 ±(99.9%) 4.891 ms/op
+Iteration   5: 20.678 ±(99.9%) 1.855 ms/op
 
-# Run progress: 12.50% complete, ETA 00:03:02
+# Run progress: 12.50% complete, ETA 00:03:06
 # Fork: 2 of 2
-# Warmup Iteration   1: 18.562 ±(99.9%) 1.369 ms/op
-# Warmup Iteration   2: 18.426 ±(99.9%) 1.400 ms/op
-# Warmup Iteration   3: 16.865 ±(99.9%) 2.252 ms/op
-Iteration   1: 20.112 ±(99.9%) 1.874 ms/op
-Iteration   2: 17.482 ±(99.9%) 1.541 ms/op
-Iteration   3: 14.625 ±(99.9%) 1.292 ms/op
-Iteration   4: 14.450 ±(99.9%) 1.031 ms/op
-Iteration   5: 14.554 ±(99.9%) 1.155 ms/op
+# Warmup Iteration   1: 17.709 ±(99.9%) 1.406 ms/op
+# Warmup Iteration   2: 18.832 ±(99.9%) 1.844 ms/op
+# Warmup Iteration   3: 16.479 ±(99.9%) 1.323 ms/op
+Iteration   1: 21.258 ±(99.9%) 1.408 ms/op
+Iteration   2: 19.524 ±(99.9%) 2.169 ms/op
+Iteration   3: 19.734 ±(99.9%) 1.497 ms/op
+Iteration   4: 17.465 ±(99.9%) 1.539 ms/op
+Iteration   5: 16.529 ±(99.9%) 1.208 ms/op
 
 
 Result "runApache":
-  21.721 ±(99.9%) 18.317 ms/op [Average]
-  (min, avg, max) = (14.450, 21.721, 53.765), stdev = 12.116
-  CI (99.9%): [3.404, 40.038] (assumes normal distribution)
+  23.685 ±(99.9%) 17.278 ms/op [Average]
+  (min, avg, max) = (15.244, 23.685, 52.693), stdev = 11.428
+  CI (99.9%): [6.407, 40.963] (assumes normal distribution)
 
 
 # JMH 1.9.3 (released 2487 days ago, please consider updating!)
@@ -89,22 +89,536 @@ Result "runApache":
 # Benchmark: benchmark.Benchmark.runApache
 # Parameters: (args = >&2, captureOutput = false, command = cat ./input_long, iterations = 1)
 
-# Run progress: 16.67% complete, ETA 00:02:54
+# Run progress: 16.67% complete, ETA 00:02:57
 # Fork: 1 of 2
-# Warmup Iteration   1: 10.072 ±(99.9%) 0.487 ms/op
-# Warmup Iteration   2: 9.966 ±(99.9%) 0.296 ms/op
-# Warmup Iteration   3: 11.508 ±(99.9%) 0.467 ms/op
-Iteration   1: 9.646 ±(99.9%) 0.332 ms/op
-Iteration   2: 10.154 ±(99.9%) 0.383 ms/op
-Iteration   3: 9.602 ±(99.9%) 0.297 ms/op
-Iteration   4: 9.693 ±(99.9%) 0.325 ms/op
-Iteration   5: 9.654 ±(99.9%) 0.305 ms/op
+# Warmup Iteration   1: 9.839 ±(99.9%) 0.302 ms/op
+# Warmup Iteration   2: 9.896 ±(99.9%) 0.392 ms/op
+# Warmup Iteration   3: 11.945 ±(99.9%) 0.497 ms/op
+Iteration   1: 9.403 ±(99.9%) 0.307 ms/op
+Iteration   2: 9.340 ±(99.9%) 0.279 ms/op
+Iteration   3: 9.426 ±(99.9%) 0.337 ms/op
+Iteration   4: 9.293 ±(99.9%) 0.302 ms/op
+Iteration   5: 9.203 ±(99.9%) 0.323 ms/op
 
-# Run progress: 20.83% complete, ETA 00:02:45
+# Run progress: 20.83% complete, ETA 00:02:47
 # Fork: 2 of 2
-# Warmup Iteration   1: 10.136 ±(99.9%) 0.322 ms/op
-# Warmup Iteration   2: 9.901 ±(99.9%) 0.308 ms/op
-# Warmup Iteration   3: 10.275 ±(99.9%) 0.371 ms/op
-Iteration   1: 9.541 ±(99.9%) 0.290 ms/op
-Iteration   2: 9.636 ±(99.9%) 0.277 ms/op
-Iteration   3: 
+# Warmup Iteration   1: 9.816 ±(99.9%) 0.530 ms/op
+# Warmup Iteration   2: 9.880 ±(99.9%) 0.333 ms/op
+# Warmup Iteration   3: 11.088 ±(99.9%) 0.460 ms/op
+Iteration   1: 9.395 ±(99.9%) 0.297 ms/op
+Iteration   2: 9.178 ±(99.9%) 0.318 ms/op
+Iteration   3: 9.304 ±(99.9%) 0.348 ms/op
+Iteration   4: 9.591 ±(99.9%) 0.324 ms/op
+Iteration   5: 9.382 ±(99.9%) 0.187 ms/op
+
+
+Result "runApache":
+  9.351 ±(99.9%) 0.179 ms/op [Average]
+  (min, avg, max) = (9.178, 9.351, 9.591), stdev = 0.119
+  CI (99.9%): [9.172, 9.531] (assumes normal distribution)
+
+
+# JMH 1.9.3 (released 2487 days ago, please consider updating!)
+# VM invoker: /home/ztan4/.jdks/corretto-1.8.0_322/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=CA -Duser.language=en -Duser.variant
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 24 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: benchmark.Benchmark.runApache
+# Parameters: (args = >&2, captureOutput = true, command = cat ./input_long, iterations = 1)
+
+# Run progress: 25.00% complete, ETA 00:02:37
+# Fork: 1 of 2
+# Warmup Iteration   1: 16.849 ±(99.9%) 1.303 ms/op
+# Warmup Iteration   2: 17.019 ±(99.9%) 1.401 ms/op
+# Warmup Iteration   3: 14.919 ±(99.9%) 1.070 ms/op
+Iteration   1: 21.693 ±(99.9%) 1.885 ms/op
+Iteration   2: 14.924 ±(99.9%) 1.031 ms/op
+Iteration   3: 15.347 ±(99.9%) 1.015 ms/op
+Iteration   4: 15.405 ±(99.9%) 1.131 ms/op
+Iteration   5: 14.374 ±(99.9%) 0.716 ms/op
+
+# Run progress: 29.17% complete, ETA 00:02:28
+# Fork: 2 of 2
+# Warmup Iteration   1: 17.871 ±(99.9%) 1.431 ms/op
+# Warmup Iteration   2: 18.379 ±(99.9%) 1.490 ms/op
+# Warmup Iteration   3: 15.661 ±(99.9%) 1.353 ms/op
+Iteration   1: 20.153 ±(99.9%) 1.757 ms/op
+Iteration   2: 19.199 ±(99.9%) 1.745 ms/op
+Iteration   3: 21.656 ±(99.9%) 1.942 ms/op
+Iteration   4: 14.452 ±(99.9%) 0.921 ms/op
+Iteration   5: 13.894 ±(99.9%) 0.907 ms/op
+
+
+Result "runApache":
+  17.110 ±(99.9%) 4.807 ms/op [Average]
+  (min, avg, max) = (13.894, 17.110, 21.693), stdev = 3.180
+  CI (99.9%): [12.303, 21.917] (assumes normal distribution)
+
+
+# JMH 1.9.3 (released 2487 days ago, please consider updating!)
+# VM invoker: /home/ztan4/.jdks/corretto-1.8.0_322/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=CA -Duser.language=en -Duser.variant
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 24 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: benchmark.Benchmark.runApache
+# Parameters: (args = | tee >(1>&2), captureOutput = false, command = cat ./input_long, iterations = 1)
+
+# Run progress: 33.33% complete, ETA 00:02:20
+# Fork: 1 of 2
+# Warmup Iteration   1: 9.892 ±(99.9%) 0.376 ms/op
+# Warmup Iteration   2: 9.766 ±(99.9%) 0.336 ms/op
+# Warmup Iteration   3: 10.753 ±(99.9%) 0.421 ms/op
+Iteration   1: 9.366 ±(99.9%) 0.359 ms/op
+Iteration   2: 9.336 ±(99.9%) 0.410 ms/op
+Iteration   3: 9.373 ±(99.9%) 0.540 ms/op
+Iteration   4: 9.286 ±(99.9%) 0.319 ms/op
+Iteration   5: 9.294 ±(99.9%) 0.301 ms/op
+
+# Run progress: 37.50% complete, ETA 00:02:11
+# Fork: 2 of 2
+# Warmup Iteration   1: 9.787 ±(99.9%) 0.434 ms/op
+# Warmup Iteration   2: 9.627 ±(99.9%) 0.198 ms/op
+# Warmup Iteration   3: 10.864 ±(99.9%) 0.383 ms/op
+Iteration   1: 9.452 ±(99.9%) 0.314 ms/op
+Iteration   2: 9.367 ±(99.9%) 0.252 ms/op
+Iteration   3: 9.172 ±(99.9%) 0.303 ms/op
+Iteration   4: 9.215 ±(99.9%) 0.225 ms/op
+Iteration   5: 9.284 ±(99.9%) 0.246 ms/op
+
+
+Result "runApache":
+  9.314 ±(99.9%) 0.124 ms/op [Average]
+  (min, avg, max) = (9.172, 9.314, 9.452), stdev = 0.082
+  CI (99.9%): [9.190, 9.438] (assumes normal distribution)
+
+
+# JMH 1.9.3 (released 2487 days ago, please consider updating!)
+# VM invoker: /home/ztan4/.jdks/corretto-1.8.0_322/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=CA -Duser.language=en -Duser.variant
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 24 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: benchmark.Benchmark.runApache
+# Parameters: (args = | tee >(1>&2), captureOutput = true, command = cat ./input_long, iterations = 1)
+
+# Run progress: 41.67% complete, ETA 00:02:02
+# Fork: 1 of 2
+# Warmup Iteration   1: 17.185 ±(99.9%) 1.363 ms/op
+# Warmup Iteration   2: 17.404 ±(99.9%) 1.371 ms/op
+# Warmup Iteration   3: 15.891 ±(99.9%) 0.866 ms/op
+Iteration   1: 20.437 ±(99.9%) 1.868 ms/op
+Iteration   2: 15.075 ±(99.9%) 0.907 ms/op
+Iteration   3: 15.436 ±(99.9%) 1.123 ms/op
+Iteration   4: 17.407 ±(99.9%) 1.571 ms/op
+Iteration   5: 15.849 ±(99.9%) 0.955 ms/op
+
+# Run progress: 45.83% complete, ETA 00:01:53
+# Fork: 2 of 2
+# Warmup Iteration   1: 16.411 ±(99.9%) 1.088 ms/op
+# Warmup Iteration   2: 16.043 ±(99.9%) 1.242 ms/op
+# Warmup Iteration   3: 16.757 ±(99.9%) 1.372 ms/op
+Iteration   1: 22.599 ±(99.9%) 1.874 ms/op
+Iteration   2: 14.751 ±(99.9%) 1.119 ms/op
+Iteration   3: 14.318 ±(99.9%) 1.090 ms/op
+Iteration   4: 14.037 ±(99.9%) 0.998 ms/op
+Iteration   5: 14.071 ±(99.9%) 0.966 ms/op
+
+
+Result "runApache":
+  16.398 ±(99.9%) 4.416 ms/op [Average]
+  (min, avg, max) = (14.037, 16.398, 22.599), stdev = 2.921
+  CI (99.9%): [11.982, 20.814] (assumes normal distribution)
+
+
+# JMH 1.9.3 (released 2487 days ago, please consider updating!)
+# VM invoker: /home/ztan4/.jdks/corretto-1.8.0_322/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=CA -Duser.language=en -Duser.variant
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 24 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: benchmark.Benchmark.runProcessBuilder
+# Parameters: (args = >&1, captureOutput = false, command = cat ./input_long, iterations = 1)
+
+# Run progress: 50.00% complete, ETA 00:01:44
+# Fork: 1 of 2
+# Warmup Iteration   1: <failure>
+
+java.io.IOException: Cannot run program "cat ./input_long": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at benchmark.Benchmark.startProcess(Benchmark.java:80)
+	at benchmark.Benchmark.runProcessBuilder(Benchmark.java:50)
+	at benchmark.generated.Benchmark_runProcessBuilder.runProcessBuilder_AverageTime(Benchmark_runProcessBuilder.java:136)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:452)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:434)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 12 more
+
+
+
+# Run progress: 54.17% complete, ETA 00:01:29
+# Fork: 2 of 2
+# Warmup Iteration   1: <failure>
+
+java.io.IOException: Cannot run program "cat ./input_long": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at benchmark.Benchmark.startProcess(Benchmark.java:80)
+	at benchmark.Benchmark.runProcessBuilder(Benchmark.java:50)
+	at benchmark.generated.Benchmark_runProcessBuilder.runProcessBuilder_AverageTime(Benchmark_runProcessBuilder.java:136)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:452)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:434)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 12 more
+
+
+
+
+# JMH 1.9.3 (released 2487 days ago, please consider updating!)
+# VM invoker: /home/ztan4/.jdks/corretto-1.8.0_322/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=CA -Duser.language=en -Duser.variant
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 24 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: benchmark.Benchmark.runProcessBuilder
+# Parameters: (args = >&1, captureOutput = true, command = cat ./input_long, iterations = 1)
+
+# Run progress: 58.33% complete, ETA 00:01:16
+# Fork: 1 of 2
+# Warmup Iteration   1: <failure>
+
+java.io.IOException: Cannot run program "cat ./input_long": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at benchmark.Benchmark.startProcess(Benchmark.java:80)
+	at benchmark.Benchmark.runProcessBuilder(Benchmark.java:50)
+	at benchmark.generated.Benchmark_runProcessBuilder.runProcessBuilder_AverageTime(Benchmark_runProcessBuilder.java:136)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:452)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:434)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 12 more
+
+
+
+# Run progress: 62.50% complete, ETA 00:01:05
+# Fork: 2 of 2
+# Warmup Iteration   1: <failure>
+
+java.lang.IllegalStateException: More threads than expected
+	at org.openjdk.jmh.runner.InfraControlL2.announceWarmupReady(InfraControl.java:178)
+	at org.openjdk.jmh.runner.InfraControl.announceWarmupReady(InfraControl.java:39)
+	at benchmark.generated.Benchmark_runProcessBuilder.runProcessBuilder_AverageTime(Benchmark_runProcessBuilder.java:134)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:452)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:434)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+
+
+# JMH 1.9.3 (released 2487 days ago, please consider updating!)
+# VM invoker: /home/ztan4/.jdks/corretto-1.8.0_322/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=CA -Duser.language=en -Duser.variant
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 24 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: benchmark.Benchmark.runProcessBuilder
+# Parameters: (args = >&2, captureOutput = false, command = cat ./input_long, iterations = 1)
+
+# Run progress: 66.67% complete, ETA 00:00:54
+# Fork: 1 of 2
+# Warmup Iteration   1: <failure>
+
+java.lang.IllegalStateException: More threads than expected
+	at org.openjdk.jmh.runner.InfraControlL2.announceWarmupReady(InfraControl.java:178)
+	at org.openjdk.jmh.runner.InfraControl.announceWarmupReady(InfraControl.java:39)
+	at benchmark.generated.Benchmark_runProcessBuilder.runProcessBuilder_AverageTime(Benchmark_runProcessBuilder.java:134)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:452)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:434)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+
+# Run progress: 70.83% complete, ETA 00:00:45
+# Fork: 2 of 2
+# Warmup Iteration   1: <failure>
+
+java.lang.IllegalStateException: More threads than expected
+	at org.openjdk.jmh.runner.InfraControlL2.announceWarmupReady(InfraControl.java:178)
+	at org.openjdk.jmh.runner.InfraControl.announceWarmupReady(InfraControl.java:39)
+	at benchmark.generated.Benchmark_runProcessBuilder.runProcessBuilder_AverageTime(Benchmark_runProcessBuilder.java:134)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:452)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:434)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+
+
+# JMH 1.9.3 (released 2487 days ago, please consider updating!)
+# VM invoker: /home/ztan4/.jdks/corretto-1.8.0_322/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=CA -Duser.language=en -Duser.variant
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 24 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: benchmark.Benchmark.runProcessBuilder
+# Parameters: (args = >&2, captureOutput = true, command = cat ./input_long, iterations = 1)
+
+# Run progress: 75.00% complete, ETA 00:00:37
+# Fork: 1 of 2
+# Warmup Iteration   1: <failure>
+
+java.io.IOException: Cannot run program "cat ./input_long": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at benchmark.Benchmark.startProcess(Benchmark.java:80)
+	at benchmark.Benchmark.runProcessBuilder(Benchmark.java:50)
+	at benchmark.generated.Benchmark_runProcessBuilder.runProcessBuilder_AverageTime(Benchmark_runProcessBuilder.java:136)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:452)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:434)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 12 more
+
+
+
+# Run progress: 79.17% complete, ETA 00:00:29
+# Fork: 2 of 2
+# Warmup Iteration   1: <failure>
+
+java.io.IOException: Cannot run program "cat ./input_long": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at benchmark.Benchmark.startProcess(Benchmark.java:80)
+	at benchmark.Benchmark.runProcessBuilder(Benchmark.java:50)
+	at benchmark.generated.Benchmark_runProcessBuilder.runProcessBuilder_AverageTime(Benchmark_runProcessBuilder.java:136)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:452)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:434)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 12 more
+
+
+
+
+# JMH 1.9.3 (released 2487 days ago, please consider updating!)
+# VM invoker: /home/ztan4/.jdks/corretto-1.8.0_322/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=CA -Duser.language=en -Duser.variant
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 24 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: benchmark.Benchmark.runProcessBuilder
+# Parameters: (args = | tee >(1>&2), captureOutput = false, command = cat ./input_long, iterations = 1)
+
+# Run progress: 83.33% complete, ETA 00:00:23
+# Fork: 1 of 2
+# Warmup Iteration   1: <failure>
+
+java.io.IOException: Cannot run program "cat ./input_long": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at benchmark.Benchmark.startProcess(Benchmark.java:80)
+	at benchmark.Benchmark.runProcessBuilder(Benchmark.java:50)
+	at benchmark.generated.Benchmark_runProcessBuilder.runProcessBuilder_AverageTime(Benchmark_runProcessBuilder.java:136)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:452)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:434)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 12 more
+
+
+
+# Run progress: 87.50% complete, ETA 00:00:16
+# Fork: 2 of 2
+# Warmup Iteration   1: <failure>
+
+java.io.IOException: Cannot run program "cat ./input_long": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at benchmark.Benchmark.startProcess(Benchmark.java:80)
+	at benchmark.Benchmark.runProcessBuilder(Benchmark.java:50)
+	at benchmark.generated.Benchmark_runProcessBuilder.runProcessBuilder_AverageTime(Benchmark_runProcessBuilder.java:136)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:452)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:434)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 12 more
+
+
+
+
+# JMH 1.9.3 (released 2487 days ago, please consider updating!)
+# VM invoker: /home/ztan4/.jdks/corretto-1.8.0_322/jre/bin/java
+# VM options: -Dfile.encoding=UTF-8 -Duser.country=CA -Duser.language=en -Duser.variant
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 24 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: benchmark.Benchmark.runProcessBuilder
+# Parameters: (args = | tee >(1>&2), captureOutput = true, command = cat ./input_long, iterations = 1)
+
+# Run progress: 91.67% complete, ETA 00:00:10
+# Fork: 1 of 2
+# Warmup Iteration   1: <failure>
+
+java.io.IOException: Cannot run program "cat ./input_long": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at benchmark.Benchmark.startProcess(Benchmark.java:80)
+	at benchmark.Benchmark.runProcessBuilder(Benchmark.java:50)
+	at benchmark.generated.Benchmark_runProcessBuilder.runProcessBuilder_AverageTime(Benchmark_runProcessBuilder.java:136)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:452)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:434)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 12 more
+
+
+
+# Run progress: 95.83% complete, ETA 00:00:05
+# Fork: 2 of 2
+# Warmup Iteration   1: <failure>
+
+java.io.IOException: Cannot run program "cat ./input_long": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at benchmark.Benchmark.startProcess(Benchmark.java:80)
+	at benchmark.Benchmark.runProcessBuilder(Benchmark.java:50)
+	at benchmark.generated.Benchmark_runProcessBuilder.runProcessBuilder_AverageTime(Benchmark_runProcessBuilder.java:136)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:452)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:434)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 12 more
+
+
+
+
+# Run complete. Total time: 00:02:00
+
+Benchmark                   (args)  (captureOutput)         (command)  (iterations)  Mode  Cnt   Score    Error  Units
+Benchmark.runApache            >&1            false  cat ./input_long             1  avgt   10  12.234 ±  4.874  ms/op
+Benchmark.runApache            >&1             true  cat ./input_long             1  avgt   10  23.685 ± 17.278  ms/op
+Benchmark.runApache            >&2            false  cat ./input_long             1  avgt   10   9.351 ±  0.179  ms/op
+Benchmark.runApache            >&2             true  cat ./input_long             1  avgt   10  17.110 ±  4.807  ms/op
+Benchmark.runApache  | tee >(1>&2)            false  cat ./input_long             1  avgt   10   9.314 ±  0.124  ms/op
+Benchmark.runApache  | tee >(1>&2)             true  cat ./input_long             1  avgt   10  16.398 ±  4.416  ms/op

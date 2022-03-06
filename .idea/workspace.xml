@@ -5,16 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="763ee47b-865a-43b5-b2b3-5c6dfc59e8b3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/META-INF/BenchmarkList" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/META-INF/BenchmarkList" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/META-INF/CompilerHints" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/META-INF/CompilerHints" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark$ExecutionPlan.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark$ExecutionPlan.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/BenchmarkRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/BenchmarkRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/benchmark/generated/Benchmark_runProcessBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.log" beforeDir="false" afterPath="$PROJECT_DIR$/out.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input_long" beforeDir="false" afterPath="$PROJECT_DIR$/input_long" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/benchmark/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/benchmark/Benchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/benchmark/BenchmarkRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/benchmark/BenchmarkRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,17 +145,6 @@
       </EXTENSION>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <list>
       <item itemvalue="Gradle.Profiling [run]" />

@@ -16,10 +16,8 @@
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/META-INF/BenchmarkList" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/META-INF/BenchmarkList" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark$ExecutionPlan.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark$ExecutionPlan.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/Benchmark.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/benchmark/BenchmarkRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/benchmark/BenchmarkRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/benchmark/generated/Benchmark_runProcessBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/benchmark/generated/Benchmark_runApache.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/benchmark/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/benchmark/Benchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/benchmark/BenchmarkRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/benchmark/BenchmarkRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

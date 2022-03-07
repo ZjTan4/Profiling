@@ -24,17 +24,18 @@ import java.util.stream.Collectors;
 public class Benchmark {
     @State(Scope.Benchmark)
     public static class ExecutionPlan {
-        @Param({"https -h google.com", "cat ./input_short", "cat ./input_long", })
+        //@Param({"https -h google.com", "cat ./input_short", "cat ./input_long", })
         //@Param({"cat ./input_short"})
         //@Param({"cat ./input_long"})
-        //@Param({"https -h google.com" })
+        @Param({"https -h google.com" })
         public String command;
 
         @Param({">&1", ">&2", "| tee >(1>&2)"})
         //@Param({"| tee >(1>&2)"})
         public String args;
 
-        @Param({"false", "true"})
+        //@Param({"false", "true"})
+        @Param({"false"})
         public String captureOutput;
 
         @Param({"1", "10", "50"})
@@ -42,11 +43,11 @@ public class Benchmark {
         public int iterations;
 
         public DefaultExecutor executor = new DefaultExecutor();
-        public ProcessBuilder processBuilder = new ProcessBuilder().inheritIO();
+        public ProcessBuilder processBuilder = new ProcessBuilder();
     }
 
 
-    @org.openjdk.jmh.annotations.Benchmark
+    //@org.openjdk.jmh.annotations.Benchmark
     public void runApache(ExecutionPlan plan, Blackhole blackhole) throws Exception{
         String[] args = {"-c", plan.command, plan.args};
         CommandLine command = CommandLine.parse("/bin/sh");
@@ -72,7 +73,7 @@ public class Benchmark {
         blackhole.consume(stdout);
     }
 
-    //@org.openjdk.jmh.annotations.Benchmark
+    @org.openjdk.jmh.annotations.Benchmark
     public void runProcessBuilder(ExecutionPlan plan, Blackhole blackhole) throws Exception {
         final ProcessBuilder processBuilder = plan.processBuilder.command("/bin/sh", "-c", plan.command, plan.args);
         boolean captureOutput = Boolean.parseBoolean(plan.captureOutput);
@@ -86,7 +87,6 @@ public class Benchmark {
 
     private void startProcess(ProcessBuilder processBuilder, boolean captureOutput, Blackhole blackhole) throws  Exception{
         Process process = processBuilder.start();
-
         if (captureOutput){
             // Capture output
             List<String> results = readOutput(process.getInputStream());

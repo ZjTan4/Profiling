@@ -24,10 +24,10 @@ import java.util.stream.Collectors;
 public class Benchmark {
     @State(Scope.Benchmark)
     public static class ExecutionPlan {
-        //@Param({"https -h google.com", "cat ./input_short", "cat ./input_long", })
+        @Param({"https -h google.com", "cat ./input_short", "cat ./input_long", })
         //@Param({"cat ./input_short"})
         //@Param({"cat ./input_long"})
-        @Param({"https -h google.com" })
+        //@Param({"https -h google.com" })
         public String command;
 
         @Param({">&1", ">&2", "| tee >(1>&2)"})
@@ -37,29 +37,21 @@ public class Benchmark {
         @Param({"false", "true"})
         public String captureOutput;
 
-        //@Param({"1", "10", "50"})
-        @Param({"5"})
+        @Param({"1", "10", "50"})
+        //@Param({"1"})
         public int iterations;
+
+        public DefaultExecutor executor = new DefaultExecutor();
+        public ProcessBuilder processBuilder = new ProcessBuilder().inheritIO();
     }
+
 
     @org.openjdk.jmh.annotations.Benchmark
-    public void runProcessBuilder(ExecutionPlan plan, Blackhole blackhole) throws Exception {
-        final ProcessBuilder processBuilder = new ProcessBuilder("/bin/sh", "-c", plan.command + " " + plan.args);
-        boolean captureOutput = Boolean.parseBoolean(plan.captureOutput);
-        processBuilder.redirectErrorStream(captureOutput);
-
-        // start <iterations> processes to call external programs
-        for (int i = 0; i < plan.iterations; i++) {
-            startProcess(processBuilder, captureOutput, blackhole);
-        }
-    }
-
-    //@org.openjdk.jmh.annotations.Benchmark
     public void runApache(ExecutionPlan plan, Blackhole blackhole) throws Exception{
         String[] args = {"-c", plan.command, plan.args};
         CommandLine command = CommandLine.parse("/bin/sh");
         command.addArguments(args, false);
-        DefaultExecutor executor = new DefaultExecutor();
+        DefaultExecutor executor = plan.executor;
 
         // redirect output
         boolean captureOutput = Boolean.parseBoolean(plan.captureOutput);
@@ -75,11 +67,21 @@ public class Benchmark {
 
         // call external programs
         for (int i = 0; i < plan.iterations; i++) {
-//            int exitValue = executor.execute(command);
-//            blackhole.consume(exitValue);
             executor.execute(command);
         }
         blackhole.consume(stdout);
+    }
+
+    //@org.openjdk.jmh.annotations.Benchmark
+    public void runProcessBuilder(ExecutionPlan plan, Blackhole blackhole) throws Exception {
+        final ProcessBuilder processBuilder = plan.processBuilder.command("/bin/sh", "-c", plan.command, plan.args);
+        boolean captureOutput = Boolean.parseBoolean(plan.captureOutput);
+        processBuilder.redirectErrorStream(captureOutput);
+
+        // start <iterations> processes to call external programs
+        for (int i = 0; i < plan.iterations; i++) {
+            startProcess(processBuilder, captureOutput, blackhole);
+        }
     }
 
     private void startProcess(ProcessBuilder processBuilder, boolean captureOutput, Blackhole blackhole) throws  Exception{
@@ -90,13 +92,14 @@ public class Benchmark {
             List<String> results = readOutput(process.getInputStream());
             blackhole.consume(results);
         }
-//        int exitCode = process.waitFor();
-//        blackhole.consume(exitCode);
     }
 
     private List<String> readOutput(InputStream inputStream) throws IOException {
+
         try (BufferedReader output = new BufferedReader(new InputStreamReader(inputStream))) {
-            return output.lines().collect(Collectors.toList());
+
+            List<String> ls = output.lines().collect(Collectors.toList());
+            return  ls;
         }
     }
 }
